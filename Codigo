@@ -1,0 +1,35 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+
+# Datos e xtraidos de Datos Expansion Macro
+Año = [2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023]
+Peru = [50.414,51.034,53.954,58.537,66.126,74.232,87.459,102.187,121.25,121.763,148.945,170.923,193.1,202.584,202.88,192.025,195.463,215.681,226.795,232.345,205.82,225.938,244.594,267.603]
+Chile = [78.236,71.517,70.295,76.508,99.079,122.315,153.84,172.566,179.663,171.413,217.105,251.225,267.176,277.239,259.405,242.497,249.299,276.365,295.403,278.18,253.88,315.647,302.117,335.533]
+
+plt.title('PBI PERU VS CHILE DEL 2000 AL 2023 - Correlacion perfecta = 0.98')
+
+plt.xlabel('AÑO')
+plt.ylabel('PBI')
+plt.plot(Año, Peru)
+plt.plot(Año, Chile)
+plt.grid()
+
+matrix1 = np.array(Peru)
+matrix2 = np.array(Chile)
+
+# Aplanar las matrices
+flat_matrix1 = matrix1.flatten()
+flat_matrix2 = matrix2.flatten()
+
+# Calcular la correlación entre las matrices aplanadas
+correlation = np.corrcoef(flat_matrix1, flat_matrix2)[0, 1]
+print(f"Correlación entre las matrices completas: {correlation}")
+
+# Provide the x and y data for the scatter plot
+plt.scatter(Año, Peru, label='PBI Peru', color='blue', marker='o')  # Plot Peru's PBI
+plt.scatter(Año, Chile, label='PBI Chile', color='red', marker='o') # Plot Chile's PBI
+plt.legend() # Show the legend
+plt.show()
