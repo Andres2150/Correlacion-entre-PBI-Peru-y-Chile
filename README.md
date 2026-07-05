@@ -6,7 +6,8 @@ Este proyecto analiza la evolución temporal del Producto Bruto Interno (PBI) de
 
 La siguiente gráfica ilustra la trayectoria del PBI de ambos países, donde se evidencia un coeficiente de **correlación de Pearson de 0.98**, considerado un nivel de correlación estadística casi perfecta.
 
-![PBI Perú vs Chile](image_19b02d.png)
+<img width="604" height="455" alt="descarga" src="https://github.com/user-attachments/assets/882ac413-fa93-426d-b874-6b65d920bde5" />
+
 
 ---
 
